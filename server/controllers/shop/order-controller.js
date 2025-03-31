@@ -123,7 +123,7 @@ const capturePayment = async (req, res) => {
 
 
         for(let item of order.cartItems){
-            let product=await Product.findById(item.productId) 
+          let product=await Product.findById(item.productId) 
 
             if(!product){
                 return res.status(404).json({
